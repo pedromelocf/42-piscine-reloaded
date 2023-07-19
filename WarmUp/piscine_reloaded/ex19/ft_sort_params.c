@@ -1,34 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 18:37:06 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/18 19:02:10 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/18 16:36:02 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/19 12:56:11 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(STDOUT_FILENO, &c, 1);
+}
 int	main(int argc, char **argv)
 {
 	int	counter;
-	int	i;
+	int	*temp;
 
-	i = 1;
-	while (argc > 1)
+	argc = 0;
+	temp = 0;
+	while (argc)
 	{
 		counter = 0;
-		while (argv[i][counter])
+		while (argc < counter - 1)
 		{
-			ft_putchar(argv[i][counter]);
-			counter++;
+			if (argv[argc] > argv[counter])
+			{
+				temp = argv[argc];
+				argv[argc] = argv[counter];
+				argv[counter] = temp;
+			}
+			argc++;
+			ft_putchar(argv[counter]);
+			ft_putchar('\n');
 		}
-		ft_putchar('\n');
-		i++;
-		argc--;
+		argc++;
 	}
 	return (0);
 }

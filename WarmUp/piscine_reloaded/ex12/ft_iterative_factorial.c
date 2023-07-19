@@ -6,16 +6,26 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:02:48 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/17 17:58:04 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:20:05 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-	
-}
+	int	result;
 
-int main (void)
-{
-	ft_iterative_factorial(2);
+	result = 1;
+	if (nb < 0)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	if (nb > 1)
+	{
+		while (nb > 1)
+		{
+			result *= nb;
+			nb--;
+		}
+	}
+	return (result);
 }

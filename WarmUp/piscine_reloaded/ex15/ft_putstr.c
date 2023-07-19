@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 18:00:37 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/17 18:04:39 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/18 14:40:31 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/18 15:46:30 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-	int i;
+	int	lenght;
 
-	i = 0;
-	while (str[0] != '\0')
+	lenght = 0;
+	while (str[lenght])
 	{
-		write(1, &str[i], 1);
-		i++;
+		ft_putchar(str[lenght]);
+		lenght++;
 	}
 }

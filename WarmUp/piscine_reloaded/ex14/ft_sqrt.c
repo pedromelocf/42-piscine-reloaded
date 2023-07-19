@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 18:37:06 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/18 19:02:10 by pmelo-ca         ###   ########.fr       */
+/*   Created: 2023/07/18 17:21:00 by pmelo-ca          #+#    #+#             */
+/*   Updated: 2023/07/18 18:52:39 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-int	main(int argc, char **argv)
+int	ft_sqrt(int nb)
 {
 	int	counter;
-	int	i;
 
-	i = 1;
-	while (argc > 1)
+	counter = 0;
+	if (nb < 0)
+		return (0);
+	while (counter < 47000)
 	{
-		counter = 0;
-		while (argv[i][counter])
-		{
-			ft_putchar(argv[i][counter]);
-			counter++;
-		}
-		ft_putchar('\n');
-		i++;
-		argc--;
+		if ((counter * counter) == nb)
+			return (counter);
+		counter++;
 	}
 	return (0);
 }
