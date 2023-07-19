@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/nfs/homes/pmelo-ca/42 Journey/WarmUp/piscine_reloaded/ex19/a.out",
+            "args": [
+                          "argumento 1",
+                          "argumento 2"
+                        ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+        }
+    ] 
+}
