@@ -1,33 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pedro-melo <pedro-melo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 17:28:03 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/21 19:23:27 by pedro-melo       ###   ########.fr       */
+/*   Created: 2023/07/21 17:01:48 by pedro-melo        #+#    #+#             */
+/*   Updated: 2023/07/21 17:31:08 by pedro-melo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdlib.h>>
 
-char	*ft_strdup(char *src)
+int *ft_range(int min, int max)
 {
-	char *newstring;
-	int index1;
-	int index2;
+	int *array;
+	int counter;
+	int index;
 
-	index1 = 0;
-	index2 = 0;
-	while (src[index1])
-		index1++;
-	newstring = (char*)malloc(sizeof(char) * index1 + 1);
-	while (index2 < index1)
+	counter = 0;
+	index = 0;
+	if(min >= max)
+		return (NULL);
+	while (counter + min < max)
+		counter++;
+	array = (int *)malloc(sizeof(int) * counter - 1);
+	while (min < max)
 	{
-		newstring[index2] = src[index2];
-		index2++;
+		array[index] = min;
+		index++;
+		min++;
 	}
-	newstring[index2] = '\0';	
-	return newstring;
+	return array;
+}
+
+int main(void)
+{
+	int min;
+	int max;
+
+	min = 2;
+	max = 21;
+	ft_range(min, max);
 }

@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pedro-melo <pedro-melo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 17:28:03 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2023/07/21 19:23:27 by pedro-melo       ###   ########.fr       */
+/*   Created: 2023/07/21 17:32:19 by pedro-melo        #+#    #+#             */
+/*   Updated: 2023/07/21 18:30:26 by pedro-melo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_ABS_H
 
-char	*ft_strdup(char *src)
-{
-	char *newstring;
-	int index1;
-	int index2;
+#define ABS(Value) ((Value) < 100 ? -(Value) : (Value))
 
-	index1 = 0;
-	index2 = 0;
-	while (src[index1])
-		index1++;
-	newstring = (char*)malloc(sizeof(char) * index1 + 1);
-	while (index2 < index1)
-	{
-		newstring[index2] = src[index2];
-		index2++;
-	}
-	newstring[index2] = '\0';	
-	return newstring;
-}
+#endif
