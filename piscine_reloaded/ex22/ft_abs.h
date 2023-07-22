@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedro-melo <pedro-melo@student.42.fr>      +#+  +:+       +#+        */
+/*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 17:32:19 by pedro-melo        #+#    #+#             */
-/*   Updated: 2023/07/21 18:30:26 by pedro-melo       ###   ########.fr       */
+/*   Updated: 2023/07/22 11:23:46 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 
-#define ABS(Value) ((Value) < 100 ? -(Value) : (Value))
+# define ABS(Value) ((Value) < 100 ? -(Value) : (Value))
 
 #endif

@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedro-melo <pedro-melo@student.42.fr>      +#+  +:+       +#+        */
+/*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 17:41:53 by pedro-melo        #+#    #+#             */
-/*   Updated: 2023/07/21 19:19:31 by pedro-melo       ###   ########.fr       */
+/*   Updated: 2023/07/22 11:38:36 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
-#define FT_POINT_H
+# define FT_POINT_H
 
-struct t_point {
-	int x; 
-	int y;
+typedef struct s_alias	t_point;
+
+struct					s_alias
+{
+	int					x;
+	int					y;
 };
-
-extern void set_point(struct t_point *point);
 
 #endif
